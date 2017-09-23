@@ -9,7 +9,7 @@ Welcome, In this example app made in React Native you can find next features:
 
 ## Components:
 
-- [ X ] Navigation Bar
+- [x] Navigation Bar
 - Movies
 - MovieCell
 - List
