@@ -1,13 +1,12 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
-import Header from './src/components/Header';
-import MoviesList from './src/components/MoviesList';
+import { StackNavigator } from 'react-navigation';
+import HomeScreen from './src/views/HomeScreen';
+import DetailsScreen from './src/views/DetailsScreen';
 
-const App = () => (
-  <View style={{ flex: 1, backgroundColor: '#EFEFEF'}}>
-  <Header headerText={'TMDB'} />
-    <MoviesList />
-  </View>
-);
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Details: { screen: DetailsScreen }
+});
 
 AppRegistry.registerComponent('TheMovieDB', () => App);

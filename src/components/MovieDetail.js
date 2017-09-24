@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View, Image, Linking } from 'react-native';
+import { Text, View, Image, Linking, TouchableOpacity } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Moment from 'moment';
 
-const MovieDetail = ({ movie }) => {
+const MovieDetail = ({ movie, onPress }) => {
   const { title, poster_path, release_date, overview, vote_average } = movie;
   const {
     thumbnailStyle,
@@ -16,29 +16,30 @@ const MovieDetail = ({ movie }) => {
     iconStyle,
     iconWithTextStyle
    } = styles;
+   
 return (
     <Card>
-
-    <CardSection>
-    <View style={headerContentStyle}>
-        <Text style={headerTextStyle}>
-          {title} ({ Moment(release_date).format('YYYY') })
-        </Text>
-        <View style={iconWithTextStyle}>
-          <Image source={require('./Star.png')} style={iconStyle}/>
-          <Text style={headerTextStyle}>{vote_average}</Text>
+    <TouchableOpacity onPress={onPress}>
+        <CardSection>
+        <View style={headerContentStyle}>
+            <Text style={headerTextStyle}>
+              {title} ({ Moment(release_date).format('YYYY') })
+            </Text>
+            <View style={iconWithTextStyle}>
+              <Image source={require('./Star.png')} style={iconStyle}/>
+              <Text style={headerTextStyle}>{vote_average}</Text>
+            </View>
         </View>
-    </View>
-    </CardSection>
+        </CardSection>
 
-    <CardSection>
-      <Image
-        style={imageStyle}
-        source={{ uri: 'https://image.tmdb.org/t/p/w500/' + poster_path }}
-      />
-      <Text style={bodyTextStyle}>{overview}</Text>
-    </CardSection>
-
+        <CardSection>
+          <Image
+            style={imageStyle}
+            source={{ uri: 'https://image.tmdb.org/t/p/w500/' + poster_path }}
+          />
+          <Text style={bodyTextStyle}>{overview}</Text>
+        </CardSection>
+      </TouchableOpacity>
     </Card>
   );
 };
