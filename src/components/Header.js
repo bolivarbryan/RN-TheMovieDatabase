@@ -1,11 +1,15 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StatusBar } from 'react-native';
 
 const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
     <View style={viewStyle}>
+      <StatusBar
+      backgroundColor="blue"
+      barStyle="light-content"
+      />
       <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );

@@ -13,7 +13,6 @@ const MovieDetail = ({ movie }) => {
     headerTextStyle,
     imageStyle,
     bodyTextStyle,
-    bodyContentStyle,
     iconStyle,
     iconWithTextStyle
    } = styles;
@@ -53,12 +52,6 @@ const styles = {
     fontSize: 16,
     fontWeight: '600'
   },
-  bodyContentStyle: {
-      flexDirection: 'column',
-      justifyContent: 'space-around',
-      marginLeft: 50,
-      marginRight: 50
-  },
   bodyTextStyle: {
     fontSize: 12,
     flex: 1
@@ -66,7 +59,7 @@ const styles = {
   imageStyle: {
     height: 140,
     width: 98,
-    marginRight:10
+    marginRight:10,
   },
   iconStyle: {
     height: 12,
