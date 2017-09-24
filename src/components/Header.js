@@ -7,7 +7,6 @@ const Header = (props) => {
   return (
     <View style={viewStyle}>
       <StatusBar
-      backgroundColor="blue"
       barStyle="light-content"
       />
       <Text style={textStyle}>{props.headerText}</Text>
