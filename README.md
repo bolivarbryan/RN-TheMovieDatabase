@@ -4,7 +4,7 @@ Welcome, In this example app made in React Native you can find next features:
 
 ## Features
 - [x] List in a View Featured movies
-- Search movies
+- [x] Search movies
 - Watch Movie Details
 
 ## Components:
