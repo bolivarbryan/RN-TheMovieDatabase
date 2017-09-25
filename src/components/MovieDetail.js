@@ -16,7 +16,7 @@ const MovieDetail = ({ movie, onPress }) => {
     iconStyle,
     iconWithTextStyle
    } = styles;
-   
+
 return (
     <Card>
     <TouchableOpacity onPress={onPress}>
@@ -26,7 +26,7 @@ return (
               {title} ({ Moment(release_date).format('YYYY') })
             </Text>
             <View style={iconWithTextStyle}>
-              <Image source={require('./Star.png')} style={iconStyle}/>
+              <Image source={require('../resources/star.png')} style={iconStyle}/>
               <Text style={headerTextStyle}>{vote_average}</Text>
             </View>
         </View>
